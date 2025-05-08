@@ -3,7 +3,7 @@ package com.csase;
 import java.util.Scanner;
 
 /*
- * Represents a student that with a study planner
+ * Represents a student with a study planner
  */
 public class Student {
 
@@ -11,13 +11,13 @@ public class Student {
     private Scanner scanner;            // scanner for user input
 
     /*
-     * Sets study planner and scanner
+     * Constructor: sets study planner and scanner
      */
-    public Student {
+    public Student() {
         planner = new StudyPlanner();
         scanner = new Scanner(System.in);
     }
-    
+
     /*
      * Gets the student's choice and runs it until the student exits
      */
@@ -30,7 +30,7 @@ public class Student {
             System.out.println(planner.getOptions());
             System.out.print("Enter option: ");
             option = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // consume newline
             runChoice(option);
         }
     }
